@@ -1,0 +1,193 @@
+main {
+    --primary-default: 0, 168, 200;
+    --bg-default: 250, 250, 250;
+    --color-prettylights-syntax-comment: #6a737d;
+    --color-prettylights-syntax-constant: #d88200;
+    --color-prettylights-syntax-entity: #75af00;
+    --color-prettylights-syntax-storage-modifier-import: #111111;
+    --color-prettylights-syntax-entity-tag: #75af00;
+    --color-prettylights-syntax-keyword: #00a8c8;
+    --color-prettylights-syntax-string: #960050;
+    --color-prettylights-syntax-variable: #d88200;
+    --color-prettylights-syntax-brackethighlighter-unmatched: #960050;
+    --color-prettylights-syntax-invalid-illegal-text: #fafafa;
+    --color-prettylights-syntax-invalid-illegal-bg: #960050;
+    --color-prettylights-syntax-carriage-return-text: #111111;
+    --color-prettylights-syntax-carriage-return-bg: #960050;
+    --color-prettylights-syntax-string-regexp: #75af00;
+    --color-prettylights-syntax-markup-list: #d88200;
+    --color-prettylights-syntax-markup-heading: #00a8c8;
+    --color-prettylights-syntax-markup-italic: #111111;
+    --color-prettylights-syntax-markup-bold: #111111;
+    --color-prettylights-syntax-markup-deleted-text: #960050;
+    --color-prettylights-syntax-markup-deleted-bg: #ffeef0;
+    --color-prettylights-syntax-markup-inserted-text: #75af00;
+    --color-prettylights-syntax-markup-inserted-bg: #e6ffed;
+    --color-prettylights-syntax-markup-changed-text: #d88200;
+    --color-prettylights-syntax-markup-changed-bg: #ffebda;
+    --color-prettylights-syntax-markup-ignored-text: #111111;
+    --color-prettylights-syntax-markup-ignored-bg: #00a8c8;
+    --color-prettylights-syntax-meta-diff-range: #75af00;
+    --color-prettylights-syntax-brackethighlighter-angle: #6a737d;
+    --color-prettylights-syntax-sublimelinter-gutter-mark: #d1d5da;
+    --color-prettylights-syntax-constant-other-reference-link: #d88200;
+    --color-btn-text: #111111;
+    --color-btn-bg: #fafafa;
+    --color-btn-border: #fafafa;
+    --color-btn-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+    --color-btn-inset-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.1);
+    --color-btn-hover-bg: #f0f0f0;
+    --color-btn-hover-border: #f0f0f0;
+    --color-btn-active-bg: rgba(var(--primary-default), 0.2);
+    --color-btn-active-border: rgba(var(--primary-default), 1);
+    --color-btn-selected-bg: rgba(var(--primary-default), 0.15);
+    --color-btn-primary-text: #ffffff;
+    --color-btn-primary-bg: rgba(var(--primary-default), 0.8);
+    --color-btn-primary-border: rgba(var(--primary-default), 0.9);
+    --color-btn-primary-shadow: 0 1px 0 rgb(27 31 36 / 10%);
+    --color-btn-primary-inset-shadow: inset 0 1px 0 hsl(0deg 0% 100% / 3%);
+    --color-btn-primary-hover-bg: rgba(var(--primary-default), 0.9);
+    --color-btn-primary-hover-border: rgba(var(--primary-default), 0.75);
+    --color-btn-primary-selected-bg: rgba(var(--primary-default), 0.8);
+    --color-btn-primary-selected-shadow: inset 0 1px 0 rgb(0 45 17 / 20%);
+    --color-btn-primary-disabled-text: #ffffff;
+    --color-btn-primary-disabled-bg: rgba(var(--primary-default), 0.5);
+    --color-btn-primary-disabled-border: rgba(var(--primary-default), 0.5);
+    --color-action-list-item-default-hover-bg: rgb(177 186 196 / 25%);
+    --color-segmented-control-bg: rgb(200 200 200 / 20%);
+    --color-segmented-control-button-bg: #f0f0f0;
+    --color-segmented-control-button-selected-border: rgba(
+      var(--bg-default),
+      0.85
+    );
+    --color-fg-default: #111111;
+    --color-fg-muted: #6a737d;
+    --color-fg-subtle: #6a737d;
+    --color-canvas-default: #fafafa;
+    --color-canvas-overlay: #fafafa;
+    --color-canvas-inset: #f6f8fa;
+    --color-canvas-subtle: #fafafa;
+    --color-border-default: rgba(240, 240, 240, 0.85);
+    --color-border-muted: #e1e4e8;
+    --color-neutral-muted: #cfd7de;
+    --color-accent-fg: #00a8c8;
+    --color-accent-emphasis: #00a8c8;
+    --color-accent-muted: rgba(var(--primary-default), 0.4);
+    --color-accent-subtle: rgba(var(--primary-default), 0.1);
+    --color-success-fg: #75af00;
+    --color-attention-fg: #d88200;
+    --color-attention-muted: #c4a30d;
+    --color-attention-subtle: #fcf4d6;
+    --color-danger-fg: #960050;
+    --color-danger-muted: #c93c37;
+    --color-danger-subtle: #ffeef0;
+    --color-primer-shadow-inset: 0 1px 0 rgba(240, 240, 240, 1),
+      inset 0 1px 0 rgba(240, 240, 240, 1);
+    --color-scale-gray-7: #f0f0f0;
+    --color-scale-blue-8: #00a8c8;
+
+    /*! Extensions from @primer/css/alerts/flash.scss */
+    --color-social-reaction-bg-hover: #f0f0f0;
+    --color-social-reaction-bg-reacted-hover: #00a8c8;
+}
+
+main .pagination-loader-container {
+    background-image: url("https://github.com/images/modules/pulls/progressive-disclosure-line.svg");
+}
+
+main .gsc-loading-image {
+    background-image: url("https://github.githubassets.com/images/mona-loading-default.gif");
+}
+
+
+:root, main {
+    color-scheme: light;
+    --primary-default: 73, 111, 152;
+    --bg-default: 241, 247, 253;
+    --glass-surface: rgba(255, 255, 255, .42);
+    --glass-inset: rgba(224, 237, 250, .38);
+    --glass-overlay: #f3f8fe;
+    --glass-border: rgba(113, 157, 200, .16);
+    --glass-hover: rgba(132, 179, 226, .22);
+    --glass-action: #496f98;
+    --glass-action-hover: #345779;
+    --glass-action-disabled: #8da6bf;
+    --color-fg-default: #2f3941;
+    --color-fg-muted: #606c76;
+    --color-fg-subtle: #69757e;
+    --color-accent-fg: #3c648c;
+    --color-accent-muted: rgba(73, 111, 152, .35);
+    --color-accent-subtle: rgba(73, 111, 152, .12);
+    --color-btn-primary-text: #fff;
+    --color-btn-primary-disabled-text: #fff;
+    --color-prettylights-syntax-keyword: #3c648c;
+    --color-prettylights-syntax-markup-heading: #3c648c;
+    --color-prettylights-syntax-entity: #5a6398;
+    --color-prettylights-syntax-entity-tag: #35685e;
+    --color-prettylights-syntax-string: #51678b;
+    --color-scale-gray-7: #e3ebf3;
+}
+
+/* Blue glass: transparent iframe canvas, quiet surfaces, blue actions. */
+html, body { background: transparent; }
+:root, main {
+    --color-canvas-default: transparent;
+    --color-canvas-overlay: var(--glass-overlay);
+    --color-canvas-inset: var(--glass-inset);
+    --color-canvas-subtle: var(--glass-surface);
+    --color-border-default: var(--glass-border);
+    --color-border-muted: var(--glass-border);
+    --color-neutral-muted: var(--glass-hover);
+    --color-btn-text: var(--color-fg-default);
+    --color-btn-bg: var(--glass-surface);
+    --color-btn-border: var(--glass-border);
+    --color-btn-hover-bg: var(--glass-hover);
+    --color-btn-hover-border: var(--color-accent-muted);
+    --color-btn-active-bg: var(--glass-hover);
+    --color-btn-active-border: var(--color-accent-fg);
+    --color-btn-selected-bg: var(--glass-hover);
+    --color-btn-primary-bg: var(--glass-action);
+    --color-btn-primary-border: var(--glass-action);
+    --color-btn-primary-hover-bg: var(--glass-action-hover);
+    --color-btn-primary-hover-border: var(--glass-action-hover);
+    --color-btn-primary-selected-bg: var(--glass-action-hover);
+    --color-btn-primary-disabled-bg: var(--glass-action-disabled);
+    --color-btn-primary-disabled-border: transparent;
+    --color-btn-shadow: 0 2px 6px rgba(43, 62, 77, .04);
+    --color-btn-inset-shadow: inset 0 1px 0 rgba(255, 255, 255, .12);
+    --color-btn-primary-shadow: 0 3px 8px rgba(43, 62, 77, .10);
+    --color-accent-emphasis: var(--glass-action);
+    --color-segmented-control-bg: var(--glass-inset);
+    --color-segmented-control-button-bg: var(--glass-surface);
+    --color-segmented-control-button-selected-border: var(--glass-border);
+    --color-action-list-item-default-hover-bg: var(--glass-hover);
+    --color-primer-shadow-inset: inset 0 1px 2px rgba(43, 62, 77, .05);
+    --color-social-reaction-bg-hover: var(--glass-hover);
+    --color-social-reaction-bg-reacted-hover: var(--glass-hover);
+    --color-scale-blue-8: var(--glass-action);
+}
+main .gsc-comment-box, main .gsc-comment {
+    border-radius: 12px;
+}
+main .gsc-comment-box-textarea {
+    border-radius: 10px;
+    background-color: var(--glass-inset);
+}
+main .gsc-comment-box-textarea:focus {
+    border-color: var(--color-accent-fg);
+    box-shadow: 0 0 0 3px var(--color-accent-subtle);
+}
+main .gsc-reactions-button {
+    border-radius: 8px;
+}
+
+/* Inherit readable text throughout the iframe, including its outer controls. */
+body { color: var(--color-fg-default); }
+main .gsc-comment-box, main .gsc-comment {
+    border-color: var(--glass-border);
+    background-color: var(--glass-surface);
+    box-shadow: 0 4px 16px rgba(43, 62, 77, .035);
+}
+main .gsc-comment-box-tabs {
+    border-bottom-color: var(--glass-border);
+}

@@ -1,0 +1,4 @@
+{{- $material := default "original" .Site.Params.texture -}}
+{{- $css := resources.Get "css/texture.css" | minify | fingerprint -}}
+{{- $js := resources.Get "js/texture.js" | minify | fingerprint -}}
+<script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" data-default="{{ $material }}" data-stylesheet="{{ $css.RelPermalink }}"></script>

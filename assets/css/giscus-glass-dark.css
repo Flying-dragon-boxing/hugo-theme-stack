@@ -1,0 +1,194 @@
+main {
+    --primary-default: 53, 120, 229;
+    --bg-default: 66, 66, 66;
+    --color-prettylights-syntax-comment: #8b949e;
+    --color-prettylights-syntax-constant: #79c0ff;
+    --color-prettylights-syntax-entity: #d2a8ff;
+    --color-prettylights-syntax-storage-modifier-import: #c9d1d9;
+    --color-prettylights-syntax-entity-tag: #7ee787;
+    --color-prettylights-syntax-keyword: #ff7b72;
+    --color-prettylights-syntax-string: #a5d6ff;
+    --color-prettylights-syntax-variable: #ffa657;
+    --color-prettylights-syntax-brackethighlighter-unmatched: #f85149;
+    --color-prettylights-syntax-invalid-illegal-text: #f0f6fc;
+    --color-prettylights-syntax-invalid-illegal-bg: #8e1519;
+    --color-prettylights-syntax-carriage-return-text: #f0f6fc;
+    --color-prettylights-syntax-carriage-return-bg: #b62324;
+    --color-prettylights-syntax-string-regexp: #7ee787;
+    --color-prettylights-syntax-markup-list: #f2cc60;
+    --color-prettylights-syntax-markup-heading: #1f6feb;
+    --color-prettylights-syntax-markup-italic: #c9d1d9;
+    --color-prettylights-syntax-markup-bold: #c9d1d9;
+    --color-prettylights-syntax-markup-deleted-text: #ffdcd7;
+    --color-prettylights-syntax-markup-deleted-bg: #67060c;
+    --color-prettylights-syntax-markup-inserted-text: #aff5b4;
+    --color-prettylights-syntax-markup-inserted-bg: #033a16;
+    --color-prettylights-syntax-markup-changed-text: #ffdfb6;
+    --color-prettylights-syntax-markup-changed-bg: #5a1e02;
+    --color-prettylights-syntax-markup-ignored-text: #c9d1d9;
+    --color-prettylights-syntax-markup-ignored-bg: #1158c7;
+    --color-prettylights-syntax-meta-diff-range: #d2a8ff;
+    --color-prettylights-syntax-brackethighlighter-angle: #8b949e;
+    --color-prettylights-syntax-sublimelinter-gutter-mark: #484f58;
+    --color-prettylights-syntax-constant-other-reference-link: #a5d6ff;
+    --color-btn-text: rgb(235 235 245 / 86%);
+    --color-btn-bg: rgba(var(--bg-default), 1);
+    --color-btn-border: rgba(var(--bg-default), 1);
+    --color-btn-shadow: 0 1px 0 rgba(var(--bg-default), 1);
+    --color-btn-inset-shadow: inset 0 1px 0 rgba(var(--bg-default), 1);
+    --color-btn-hover-bg: rgba(var(--bg-default), 0.5);
+    --color-btn-hover-border: rgba(var(--bg-default), 0.5);
+    --color-btn-active-bg: rgba(var(--primary-default), 0.2);
+    --color-btn-active-border: rgba(var(--primary-default), 1);
+    --color-btn-selected-bg: rgba(var(--primary-default), 0.15);
+    --color-btn-primary-text: rgb(255 255 255 / 100%);
+    --color-btn-primary-bg: rgba(var(--primary-default), 0.45);
+    --color-btn-primary-border: rgba(var(--primary-default), 0.5);
+    --color-btn-primary-shadow: 0 1px 0 rgb(27 31 36 / 10%);
+    --color-btn-primary-inset-shadow: inset 0 1px 0 hsl(0deg 0% 100% / 3%);
+    --color-btn-primary-hover-bg: rgba(var(--primary-default), 0.53);
+    --color-btn-primary-hover-border: rgba(var(--primary-default), 0.75);
+    --color-btn-primary-selected-bg: rgba(var(--primary-default), 0.45);
+    --color-btn-primary-selected-shadow: inset 0 1px 0 rgb(0 45 17 / 20%);
+    --color-btn-primary-disabled-text: rgb(255 255 255 / 80%);
+    --color-btn-primary-disabled-bg: rgba(var(--primary-default), 0.5);
+    --color-btn-primary-disabled-border: rgba(var(--primary-default), 0.5);
+    --color-action-list-item-default-hover-bg: rgb(177 186 196 / 12%);
+    --color-segmented-control-bg: rgb(110 118 129 / 10%);
+    --color-segmented-control-button-bg: #0d1117;
+    --color-segmented-control-button-selected-border: rgba(
+      var(--bg-default),
+      0.85
+    );
+    --color-fg-default: rgb(235 235 245 / 86%);
+    --color-fg-muted: rgb(235 235 245 / 60%);
+    --color-fg-subtle: rgb(235 235 245 / 50%);
+    --color-canvas-default: rgb(40 40 40 / 100%);
+    --color-canvas-overlay: rgb(37 37 37 / 100%);
+    --color-canvas-inset: rgb(37 37 37 / 100%);
+    --color-canvas-subtle: rgba(var(--bg-default), 1);
+    --color-border-default: rgba(var(--bg-default), 0.85);
+    --color-border-muted: rgb(175 184 193 / 20%);
+    --color-neutral-muted: rgb(175 184 193 / 20%);
+    --color-accent-fg: rgba(var(--primary-default), 0.85);
+    --color-accent-emphasis: rgba(var(--primary-default), 0.95);
+    --color-accent-muted: rgba(var(--primary-default), 0.4);
+    --color-accent-subtle: rgba(var(--primary-default), 0.1);
+    --color-success-fg: #3fb950;
+    --color-attention-fg: #d29922;
+    --color-attention-muted: rgb(187 128 9 / 40%);
+    --color-attention-subtle: rgb(187 128 9 / 15%);
+    --color-danger-fg: #f85149;
+    --color-danger-muted: rgb(248 81 73 / 40%);
+    --color-danger-subtle: rgb(248 81 73 / 10%);
+    --color-primer-shadow-inset: 0 1px 0 rgba(var(--bg-default), 1),
+      inset 0 1px 0 rgba(var(--bg-default), 1);
+    --color-scale-gray-7: rgb(22 22 24 / 100%);
+    --color-scale-blue-8: rgb(16 185 129 / 15%);
+  
+    /*! Extensions from @primer/css/alerts/flash.scss */
+    --color-social-reaction-bg-hover: var(--color-scale-gray-7);
+    --color-social-reaction-bg-reacted-hover: var(--color-scale-blue-8);
+  }
+  
+  main .pagination-loader-container {
+    background-image: url("https://github.com/images/modules/pulls/progressive-disclosure-line-dark.svg");
+  }
+  
+  main .gsc-loading-image {
+    background-image: url("https://github.githubassets.com/images/mona-loading-dark.gif");
+  }
+
+:root, main {
+    color-scheme: normal;
+    --primary-default: 119, 159, 199;
+    --bg-default: 35, 45, 53;
+    --glass-surface: rgba(46, 67, 85, .28);
+    --glass-inset: rgba(14, 27, 40, .20);
+    --glass-overlay: #263647;
+    --glass-border: rgba(155, 190, 222, .18);
+    --glass-hover: rgba(122, 171, 220, .16);
+    --glass-action: #779fc7;
+    --glass-action-hover: #90b3d6;
+    --glass-action-disabled: #506d89;
+    --color-fg-default: #eaf1f5;
+    --color-fg-muted: #bdccd5;
+    --color-fg-subtle: #afc1cc;
+    --color-accent-fg: #a8cbee;
+    --color-accent-muted: rgba(119, 159, 199, .35);
+    --color-accent-subtle: rgba(119, 159, 199, .12);
+    --color-btn-primary-text: #142536;
+    --color-btn-primary-disabled-text: #dceaf2;
+    --color-prettylights-syntax-markup-heading: #a8cbee;
+    --color-scale-gray-7: #263647;
+}
+
+/* Blue glass: transparent iframe canvas, quiet surfaces, blue actions. */
+html, body { background: transparent; }
+:root, main {
+    --color-canvas-default: transparent;
+    --color-canvas-overlay: var(--glass-overlay);
+    --color-canvas-inset: var(--glass-inset);
+    --color-canvas-subtle: var(--glass-surface);
+    --color-border-default: var(--glass-border);
+    --color-border-muted: var(--glass-border);
+    --color-neutral-muted: var(--glass-hover);
+    --color-btn-text: var(--color-fg-default);
+    --color-btn-bg: var(--glass-surface);
+    --color-btn-border: var(--glass-border);
+    --color-btn-hover-bg: var(--glass-hover);
+    --color-btn-hover-border: var(--color-accent-muted);
+    --color-btn-active-bg: var(--glass-hover);
+    --color-btn-active-border: var(--color-accent-fg);
+    --color-btn-selected-bg: var(--glass-hover);
+    --color-btn-primary-bg: var(--glass-action);
+    --color-btn-primary-border: var(--glass-action);
+    --color-btn-primary-hover-bg: var(--glass-action-hover);
+    --color-btn-primary-hover-border: var(--glass-action-hover);
+    --color-btn-primary-selected-bg: var(--glass-action-hover);
+    --color-btn-primary-disabled-bg: var(--glass-action-disabled);
+    --color-btn-primary-disabled-border: transparent;
+    --color-btn-shadow: 0 2px 6px rgba(43, 62, 77, .04);
+    --color-btn-inset-shadow: inset 0 1px 0 rgba(255, 255, 255, .12);
+    --color-btn-primary-shadow: 0 3px 8px rgba(43, 62, 77, .10);
+    --color-accent-emphasis: var(--glass-action);
+    --color-segmented-control-bg: var(--glass-inset);
+    --color-segmented-control-button-bg: var(--glass-surface);
+    --color-segmented-control-button-selected-border: var(--glass-border);
+    --color-action-list-item-default-hover-bg: var(--glass-hover);
+    --color-primer-shadow-inset: inset 0 1px 2px rgba(43, 62, 77, .05);
+    --color-social-reaction-bg-hover: var(--glass-hover);
+    --color-social-reaction-bg-reacted-hover: var(--glass-hover);
+    --color-scale-blue-8: var(--glass-action);
+}
+main .gsc-comment-box, main .gsc-comment {
+    border-radius: 12px;
+}
+main .gsc-comment-box-textarea {
+    border-radius: 10px;
+    background-color: var(--glass-inset);
+}
+main .gsc-comment-box-textarea:focus {
+    border-color: var(--color-accent-fg);
+    box-shadow: 0 0 0 3px var(--color-accent-subtle);
+}
+main .gsc-reactions-button {
+    border-radius: 8px;
+}
+
+/* Inherit readable text throughout the iframe, including its outer controls. */
+body { color: var(--color-fg-default); }
+main .gsc-comment-box, main .gsc-comment {
+    border-color: var(--glass-border);
+    background-color: var(--glass-surface);
+    box-shadow: 0 4px 16px rgba(43, 62, 77, .035);
+}
+main .gsc-comment-box-tabs {
+    border-bottom-color: var(--glass-border);
+}
+
+/* Keep the iframe canvas transparent even under a dark host color scheme. */
+html, body, #__next, main {
+    background: transparent !important;
+}
+html { color-scheme: normal; }

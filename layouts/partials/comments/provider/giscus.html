@@ -1,4 +1,10 @@
 {{- with .Site.Params.comments.giscus -}}
+{{- $lightCSS := resources.Get "css/giscus-glass.css" | minify -}}
+{{- $darkCSS := resources.Get "css/giscus-glass-dark.css" | minify -}}
+{{- $lightTheme := printf "data:text/css;base64,%s" ($lightCSS.Content | base64Encode) -}}
+{{- $darkTheme := printf "data:text/css;base64,%s" ($darkCSS.Content | base64Encode) -}}
+{{- $initialLight := "light" -}}
+{{- $initialDark := "transparent_dark" -}}
 <script
     src="https://giscus.app/client.js"
     data-repo="{{- .repo -}}"
@@ -10,42 +16,42 @@
     data-reactions-enabled="{{- default 1 .reactionsEnabled -}}"
     data-emit-metadata="{{- default 0 .emitMetadata -}}"
     data-input-position="{{- default `top` .inputPosition -}}"
-    data-theme="{{- default `light` .lightTheme -}}"
+    data-theme="{{- $initialLight -}}"
     data-lang="{{- default `en` .lang -}}"
     crossorigin="anonymous"
     async
 ></script>
 <script>
-    function setGiscusTheme(theme) {
-        let giscus = document.querySelector("iframe.giscus-frame");
-        if (giscus) {
-            giscus.contentWindow.postMessage(
-                {
-                    giscus: {
-                        setConfig: {
-                            theme: theme,
-                        },
-                    },
-                },
-                "https://giscus.app"
-            );
+    (() => {
+        const lightTheme = {{ $lightTheme | jsonify | safeJS }};
+        const darkTheme = {{ $darkTheme | jsonify | safeJS }};
+        const client = document.querySelector('script[src="https://giscus.app/client.js"]');
+        client.dataset.theme = document.documentElement.dataset.scheme === 'dark'
+            ? {{ $initialDark | jsonify | safeJS }}
+            : {{ $initialLight | jsonify | safeJS }};
+        let lastTheme;
+        let lastFrame;
+        function syncTheme() {
+            const frame = document.querySelector('iframe.giscus-frame');
+            if (!frame) return;
+            const theme = document.documentElement.dataset.scheme === 'dark' ? darkTheme : lightTheme;
+            if (lastFrame === frame && lastTheme === theme) return;
+            frame.contentWindow.postMessage({ giscus: { setConfig: { theme } } }, 'https://giscus.app');
+            lastFrame = frame;
+            lastTheme = theme;
         }
-    }
-
-    (function () {
-        addEventListener("message", (e) => {
-            if (event.origin !== "https://giscus.app") return;
-            handler();
+        window.addEventListener('message', event => {
+            const frame = document.querySelector('iframe.giscus-frame');
+            if (event.origin !== 'https://giscus.app' || event.source !== frame?.contentWindow || !event.data?.giscus) return;
+            syncTheme();
         });
-        window.addEventListener("onColorSchemeChange", handler);
-
-        function handler() {
-            if (document.documentElement.dataset.scheme === "light") {
-                setGiscusTheme('{{- default "light" .lightTheme -}}');
-            } else {
-                setGiscusTheme('{{- default "dark_dimmed" .darkTheme -}}');
-            }
-        }
+        window.addEventListener('onColorSchemeChange', syncTheme);
+        // The iframe load event guarantees a retry even if its first message was missed.
+        document.addEventListener('load', event => {
+            if (!event.target.matches?.('iframe.giscus-frame')) return;
+            lastTheme = undefined;
+            syncTheme();
+        }, true);
     })();
 </script>
 {{- end -}}

@@ -26,3 +26,22 @@ Visit [stack.jimmycai.com](https://stack.jimmycai.com)
 Please do not remove the "*Theme Stack designed by Jimmy*" text and link.
 
 If you want to port this theme to another blogging platform, please let me know🙏.
+
+
+### Blue glass material (this fork)
+
+Keep Stack's layout and enable the blue-white glass material in the site configuration:
+
+```yaml
+params:
+  texture: glass # glass, paper, or original (default)
+```
+
+If the site overrides `layouts/partials/head/custom.html`, include
+`{{ partial "head/texture.html" . }}` there. The theme uses fingerprinted CSS and
+JavaScript assets. Normal visits have no demo toolbar; add `?texture-demo=glass`,
+`paper`, or `original` to compare materials. Light and dark schemes are supported.
+
+The giscus provider includes blue glass comment styles. It sends the CSS as a data
+stylesheet through giscus's theme API, avoiding cross-origin requests for local
+CSS. Text remains readable in dark mode and the iframe canvas is transparent.
